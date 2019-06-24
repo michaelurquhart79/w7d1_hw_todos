@@ -9,10 +9,25 @@
   <body>
     <div id="app">
       <ul>
-        <li v-for="item in todos">{{item}}</li>
+        <li v-for="item in todos">
+          <span>{{ item.name }}</span>
+          <span>{{ item.priority }}</span>
+
+        </li>
       </ul>
 
-      <input type="text" v-model="newItem">
+      <input type="text" v-model="newItemName">
+
+      <label for="high">High</label>
+      <input type="radio" id="high" value="High" v-model="newItemPriority">
+
+      <label for="medium">Medium</label>
+      <input type="radio" id="medium" value="Medium" v-model="newItemPriority">
+
+      <label for="low">Low</label>
+      <input type="radio" id="low" value="Low" v-model="newItemPriority">
+
+
       <button v-on:click="saveNewItem">Save new Item</button>
     </div>
   </body>

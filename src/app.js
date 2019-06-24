@@ -3,19 +3,27 @@
 import Vue from 'vue';
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('test: dom loaded');
+  // console.log('test: dom loaded');
   new Vue({
     el: "#app",
     data: {
       todos: [
-        "Buy shopping", "Clean bathroom", "Car's MOT"
+        {name: "Buy shopping", priority: "High"},
+        {name: "Clean bathroom", priority: "Low"},
+        {name:"Car's MOT", priority: "Medium"}
       ],
-      newItem: ""
+      newItemName: "",
+      newItemPriority: ""
     },
     methods: {
       saveNewItem: function(){
-        this.todos.push(this.newItem);
-        this.newItem = "";
+        this.todos.push({
+          name: this.newItemName,
+          priority: this.newItemPriority 
+        });
+
+        this.newItemName = "";
+        this.newItemPriority = "";
       }
     }
   });
