@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
       todos: [
         {name: "Buy shopping", priority: "High"},
         {name: "Clean bathroom", priority: "Low"},
-        {name:"Car's MOT", priority: "Medium"}
+        {name:"Car's MOT", priority: "High"}
       ],
       newItemName: "",
       newItemPriority: ""
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
       saveNewItem: function(){
         this.todos.push({
           name: this.newItemName,
-          priority: this.newItemPriority 
+          priority: this.newItemPriority
         });
 
         this.newItemName = "";

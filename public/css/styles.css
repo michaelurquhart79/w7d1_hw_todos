@@ -1,0 +1,33 @@
+body{
+  font-family: Helvetica;
+}
+
+li{
+  border-radius: 0.3em;
+  max-width: 22em;
+}
+
+li.highP{
+  color: red;
+  border: 2px solid red;
+}
+
+li.lowP{
+  color: green;
+  border: 2px solid green;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0em;
+}
+
+li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+button{
+  color: white;
+  background-color: black;
+}
